@@ -3,7 +3,9 @@
 **One Stream Deck + dial that controls the volume of whatever is making sound
 on your PC right now.**
 
-Turn it to change the volume. Click it to jump to the next program. That's it.
+Turn it to change the volume. Click it to jump to the next program. That's it
+It only lets you cycle between apps and programs that are actively running! you're free to 
+manually remove bloat app's that don't make much noise to declutter the mess.
 
 ---
 
