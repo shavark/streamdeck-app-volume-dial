@@ -85,18 +85,67 @@ moment.
 
 ## Install
 
-1. Copy the `appvoldial` folder into your Stream Deck plugins directory,
-   renamed exactly:
+There's no installer yet, so it's a copy-a-folder job. Five minutes, and you
+only do it once.
+
+1. **Download it.** Green **Code** button at the top of this page →
+   **Download ZIP**.
+
+2. **Unblock it before extracting.** Right-click the downloaded `.zip` →
+   **Properties** → tick **Unblock** at the bottom → **OK**. Windows marks
+   anything from the internet as untrusted, and skipping this is the most
+   likely reason it won't work.
+
+3. **Extract it.** You'll get a folder called
+   `streamdeck-app-volume-dial-main`.
+
+4. **Rename that folder** to exactly:
 
    ```
-   %APPDATA%\Elgato\StreamDeck\Plugins\com.varkness.appvoldial.sdPlugin\
+   com.varkness.appvoldial.sdPlugin
    ```
 
-2. Restart the Stream Deck app.
-3. Drag **App Volume (press to cycle)** onto a dial.
+   The name matters — Stream Deck ignores folders that don't end in
+   `.sdPlugin`. If Windows hides file extensions you may not see the
+   `.sdPlugin` part after renaming; that's fine.
 
-Needs Windows 10 or later and Stream Deck software 6.5+ with a device that has
-dials. Nothing else to install — no packages, no extra services, no account.
+5. **Open the plugins folder.** Press `Win + R`, paste this, press Enter:
+
+   ```
+   %APPDATA%\Elgato\StreamDeck\Plugins
+   ```
+
+6. **Move your renamed folder into it.**
+
+7. **Fully quit Stream Deck and reopen it.** Right-click the Stream Deck icon
+   in the system tray → **Quit**. Closing the window isn't enough — it keeps
+   running in the tray and won't notice the new plugin.
+
+8. In Stream Deck, find **App Volume Dial** in the actions list on the right
+   and **drag "App Volume (press to cycle)" onto one of your dials.**
+
+The dial should immediately show whatever is making sound. If nothing is
+playing, it'll say `No audio` until something does.
+
+### If it doesn't show up
+
+Check `%APPDATA%\Elgato\StreamDeck\logs\com.varkness.appvoldial0.log`. Working
+looks like this:
+
+```
+registered with Stream Deck
+audio helper ready
+```
+
+No log file at all usually means the folder name is wrong, or it isn't
+directly inside `Plugins`. An empty dial despite the log usually means step 2
+was skipped — delete the folder, start again, and tick Unblock this time.
+
+### Requirements
+
+Windows 10 or later, and Stream Deck software 6.5+ with a device that has
+dials (Stream Deck +). Nothing else to install — no packages, no extra
+services, no account, no admin rights.
 
 ## Known limits
 
