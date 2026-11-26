@@ -9,13 +9,11 @@ Turn it to change the volume. Click it to jump to the next program. That's it.
 
 ## The problem this solves
 
-Every other way of putting app volume on a dial makes you build a list — this
-game, that browser, Discord — and then you live with that list forever.
+Most methods for creating a knob cycle for audio has issues, either programs randomly dropping, or 
+having to manually add individual audio programs into an infinite cycle pool which just becomes tedious when said programs are no longer runing 
 
-It goes stale immediately. Programs update and change their install folder, so
-the entry silently dies. Programs you closed months ago still sit in the
-rotation. Things you'd never touch in your life — a screenshot tool, a game
-launcher, an updater that pinged once — pile up in there too.
+Programs you closed months ago still sit in the
+rotation. 
 
 You end up with an endless pool of dead and pointless entries to click past
 before you reach the one thing you actually wanted to turn down. It's not
@@ -60,7 +58,10 @@ coming and can let go to cancel. It's deliberately slow — banishing should
 never happen by accident on a dial you're spinning all day.
 
 Banished programs stay banished. Closing them, reopening them, rebooting —
-they won't come back on their own.
+they won't come back on their own. This solves the issue of having too many programs on the dial 
+as a default. I want the user to feel comfortable knowing that only important programs that require manual 
+editing is accessible and stress free. So, choose you banish some programs (they will stay at the audio level of your choice) 
+so the button won't have to worry about dealing with it in the cycle. 
 
 ### Getting them back
 
@@ -68,7 +69,8 @@ they won't come back on their own.
 itself). Everything you've banished returns at once, and it tells you how many
 came back.
 
-That's all-or-nothing for now — there's no way to un-banish a single program.
+That's all-or-nothing for now — there's no way to un-banish a single program. I may think of a smarter way to return specific individual audio track, or maybe a control+Z type of method for restoring deleted apps
+But for now, it stays as is. It gets the job done; Ive given you 3 seconds to make your choice! suffer the consequences of fully resetting all audio tracks and having to banish unwanted programs
 
 ## Why banishing is manual
 
