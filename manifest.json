@@ -1,0 +1,49 @@
+{
+  "Name": "App Volume Dial",
+  "Version": "1.0.0.0",
+  "Author": "local",
+  "Description": "Turn the dial to change an app's volume. Press the dial to jump to the next app that is making sound right now. Tap the screen to mute.",
+  "Category": "App Volume Dial",
+  "CategoryIcon": "imgs/icon",
+  "Icon": "imgs/icon",
+  "CodePath": "bin/plugin.js",
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "6.5"
+  },
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Nodejs": {
+    "Version": "20",
+    "Debug": "enabled"
+  },
+  "UUID": "com.varkness.appvoldial",
+  "Actions": [
+    {
+      "Name": "App Volume (press to cycle)",
+      "UUID": "com.varkness.appvoldial.dial",
+      "Icon": "imgs/icon",
+      "Tooltip": "Turn: volume. Press: next app making sound. Tap: mute.",
+      "Controllers": [
+        "Encoder"
+      ],
+      "Encoder": {
+        "layout": "$B1",
+        "TriggerDescription": {
+          "Rotate": "Volume",
+          "Push": "Next app  (hold: hide it)",
+          "Touch": "Mute  (hold: un-hide all)"
+        }
+      },
+      "States": [
+        {
+          "Image": "imgs/icon"
+        }
+      ]
+    }
+  ]
+}
