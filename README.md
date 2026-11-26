@@ -91,15 +91,10 @@ only do it once.
 1. **Download it.** Green **Code** button at the top of this page →
    **Download ZIP**.
 
-2. **Unblock it before extracting.** Right-click the downloaded `.zip` →
-   **Properties** → tick **Unblock** at the bottom → **OK**. Windows marks
-   anything from the internet as untrusted, and skipping this is the most
-   likely reason it won't work.
-
-3. **Extract it.** You'll get a folder called
+2. **Extract it.** You'll get a folder called
    `streamdeck-app-volume-dial-main`.
 
-4. **Rename that folder** to exactly:
+3. **Rename that folder** to exactly:
 
    ```
    com.varkness.appvoldial.sdPlugin
@@ -109,19 +104,19 @@ only do it once.
    `.sdPlugin`. If Windows hides file extensions you may not see the
    `.sdPlugin` part after renaming; that's fine.
 
-5. **Open the plugins folder.** Press `Win + R`, paste this, press Enter:
+4. **Open the plugins folder.** Press `Win + R`, paste this, press Enter:
 
    ```
    %APPDATA%\Elgato\StreamDeck\Plugins
    ```
 
-6. **Move your renamed folder into it.**
+5. **Move your renamed folder into it.**
 
-7. **Fully quit Stream Deck and reopen it.** Right-click the Stream Deck icon
+6. **Fully quit Stream Deck and reopen it.** Right-click the Stream Deck icon
    in the system tray → **Quit**. Closing the window isn't enough — it keeps
    running in the tray and won't notice the new plugin.
 
-8. In Stream Deck, find **App Volume Dial** in the actions list on the right
+7. In Stream Deck, find **App Volume Dial** in the actions list on the right
    and **drag "App Volume (press to cycle)" onto one of your dials.**
 
 The dial should immediately show whatever is making sound. If nothing is
@@ -137,9 +132,18 @@ registered with Stream Deck
 audio helper ready
 ```
 
-No log file at all usually means the folder name is wrong, or it isn't
-directly inside `Plugins`. An empty dial despite the log usually means step 2
-was skipped — delete the folder, start again, and tick Unblock this time.
+No log file at all almost always means the folder name is wrong, or the folder
+isn't directly inside `Plugins` — a common slip is ending up with
+`Plugins\com.varkness.appvoldial.sdPlugin\streamdeck-app-volume-dial-main\`,
+one level too deep. `manifest.json` must sit directly inside the
+`.sdPlugin` folder.
+
+If the log says `registered with Stream Deck` but never `audio helper ready`,
+Windows is refusing to run the helper script. This was tested on a normal
+Windows 11 machine with the files still marked as internet-downloaded and it
+worked fine, so you shouldn't hit it — but on a locked-down or work machine,
+right-click the ZIP → **Properties** → tick **Unblock** → **OK**, then
+extract and install again.
 
 ### Requirements
 
